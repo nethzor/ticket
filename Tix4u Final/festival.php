@@ -112,6 +112,7 @@ session_start();
 							<li ><a href="index.php">HOME</a></li>
 							<li><a href="gallery.php">GALLERY</a></li>
 							<li class="active"><a href="events.php">EVENTS</a></li>
+							<li><a href="buysell.php">BUY&SELL </a></li>
 							<li><a href="contact.php">CONTACT</a></li>
 							
 							

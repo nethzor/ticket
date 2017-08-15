@@ -114,6 +114,7 @@
 							
 						</li>
 						<li><a href="events.php">EVENTS</a></li>
+						<li><a href="buysell.php">BUY&SELL </a></li>
 						<li><a href="contact.php">CONTACT</a></li>
 						<li style=""><a href="#">LOG IN</a></li>
 						
