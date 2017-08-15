@@ -1,6 +1,6 @@
-<!doctype html>
-<?php 
-session_start();
+<?php
+
+	session_start();
  require('../asb/inc/config.php');
 	require('../asb/inc/functions.php');
 	$db = mysqli_connect("localhost","root","") or die("Unable to connect to database");
@@ -75,28 +75,32 @@ session_start();
 		}
 		
 	}	
-<<<<<<< HEAD
-=======
 
->>>>>>> develop
+	
 ?>
+
+<!doctype html>
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title>FESTIVAL-EVENT</title>
+		<title>Contact</title>
 		<link rel="stylesheet" type="text/css" href="css/homeStyle.css">
 		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">	
-		<script type="text/javascript" src="api/jkit.complete/jquery-1.9.1.min.js"></script>
-		<script type="text/javascript" src="api/jkit.complete/jquery.jkit.1.2.16.min.js"></script>		
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<script type="text/javascript" src="api/jkit.complete/jquery.jkit.1.2.16.min.js"></script>
+
+		
 	</head>
 	
 	<body>
-		<header>
-<<<<<<< HEAD
-=======
 		
->>>>>>> develop
+				<script type="text/javascript">
+				$(document).ready(function(){
+					$('body').jKit();
+				});
+				</script>
+			
+			<header>
 			<div class="navbar navbar-default navbar-fixed-top navbar-inverse">
 				<div class="container">
 					<div class="navbar-header">
@@ -163,91 +167,35 @@ session_start();
 					
 
 				</div>
+				
+					
+				
 			</div>
-<<<<<<< HEAD
 				
 		</header>
-		
-		<?php
-						$query = "SELECT * FROM events WHERE eventName = 'Festival'";
-=======
 			
-		</header>
-		
-		<?php
 			
-			$query = "SELECT * FROM events WHERE eventName = 'Festival'";
->>>>>>> develop
-						mysqli_query($db, $query) or die('EVENT NOT FOUND.');
+			
+			<div class="sldShow">
+				
+			</div>
+			
+			
 
-						$result = mysqli_query($db, $query);
-						$row = mysqli_fetch_array($result);									
-						$eventName = $row['eventName'];
-						$eventDescription = $row['eventDescription'];
-						$eventCategory = $row['eventCategory'];
-						$eventLink = $row['eventLink'];
-						$eventPrice = $row['eventPrice'];
-						$eventDate = $row['eventDate'];
-						$eventsPhotoLink = $row['eventPhotoLink'];
-						$output = '
-						<img class="imageB"; src="'.$eventsPhotoLink.'"/>
-<<<<<<< HEAD
-=======
-						
-						<div style=margin-bottom:150px;class="col text-center">
-							<center>
-								<div class="eventBox">
-									<div>
-										<a href="'.$eventLink.'"><span>'.$eventName.'</span></a>
-										<h3>From R'.$eventPrice.'</h3>
-										
-									</div>
-										
-										<h3>'.$eventDescription.'</h3>
-									</div>
-								</div>
-							</center>
-						</div>
-						';
->>>>>>> develop
-						
-						<div style=margin-bottom:150px;class="col text-center">
-							<center>
-								<div class="eventBox">
-									<div>
-										<a href="'.$eventLink.'"><span>'.$eventName.'</span></a>
-										<h3>From R'.$eventPrice.'</h3>
-										
-									</div>
-										
-										<h3>'.$eventDescription.'</h3>
-									</div>
-								</div>
-							</center>
-						</div>
-						';
-		?>
-			<!--DIE CHAT SE LINK-->
-	<!--https://salesiq.zoho.com/-->	
-	<script type="text/javascript">
-	var $zoho=$zoho || {};$zoho.salesiq = $zoho.salesiq || 
-	{widgetcode:"7326515b74ea374c61d3ec46aa879f9d39ec90e79be88a4b11ad7ea2f28f1c40", values:{},ready:function(){}};
-	var d=document;s=d.createElement("script");s.type="text/javascript";s.id="zsiqscript";s.defer=true;
-	s.src="https://salesiq.zoho.com/widget";t=d.getElementsByTagName("script")[0];t.parentNode.insertBefore(s,t);d.write("<div id='zsiqwidget'></div>");
-	</script>
-	<!--End van chat se link-->	
+			
+				<div class="container" style="margin-top:25px">
+				
+				</div>
+				
+				<center style="padding-bottom:50px;">
+					
+				</center>
+			</div>
+			
+
+			
+	
+			<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+			<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 	</body>
-<<<<<<< HEAD
-	 <?php 
-=======
-	<?php 
->>>>>>> develop
-		
-		print("$output");
-		
-	?>
-<<<<<<< HEAD
-=======
-	 
->>>>>>> develop
 </html>

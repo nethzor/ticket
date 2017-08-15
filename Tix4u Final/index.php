@@ -85,9 +85,12 @@
 		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 		
+<<<<<<< HEAD
 		
 		
 		<script type="text/javascript" src="api/jkit.complete/jquery.jkit.1.2.16.min.js"></script>
+=======
+>>>>>>> develop
 
 		
 	</head>
@@ -100,9 +103,10 @@
 				});
 				</script>
 			
-			<header>
+		<header>
 			<div class="navbar navbar-default navbar-fixed-top navbar-inverse">
 				<div class="container">
+<<<<<<< HEAD
 					<div class="navbar-header">
 						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#example">
 							<span class="icon-bar"></span>
@@ -164,12 +168,75 @@
 					
 				<li style="font-size:1.0em;padding-top:10px"><a href="#"><i class="fa fa fa-shopping-cart fa-2x"></i>(0)</a></li>
 				</div>
+=======
+						<div class="navbar-header">
+							<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#example">
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+							</button>
+							<a style="float:left"href="index.php" class="navbar-brand">Tix4u</a>
+						</div>
+					<div class="collpase navbar-collapse" id="example">
+							<ul class="nav navbar-nav">
+								<li class="active"><a href="index.php">HOME</a></li>
+								<li><a href="gallery.php">GALLERY</a></li>
+								<li><a href="events.php">EVENTS</a></li>
+								<li><a href="contact.php">CONTACT</a></li>
+								
+								
+							</ul>
+
+							
+
+							<form action="searchResults.php" class="navbar-form navbar-right" role="search" id="searchBox" method="post">
+							<div class="form-group">
+								<input id="searchBoxInput" name="search" type="text" class="form-control" onkeydown="key_down()" placeholder="Search..." autocomplete="off">
+								<script>
+								  function key_down(e) 
+								  {
+									if(e.keyCode === 13)
+									{
+									  search_func();
+									}
+								  }
+
+								  function search_func() 
+								  {
+									var address = document.getElementById("searchBoxInput").value;
+									initialize();
+								  }
+								</script>
+							</div>
+							<button type="submit" class="btn btn-primary">Search</button>
+							<!--<input type="text" name="email" id="email" size="36" value="<?php echo $_SESSION['newsletterSignup'];?>"" />!-->
+							</form>
+							<form class="navbar-form navbar-right" action="<?php echo $action; ?>" role="search">
+								<button style='margin-right:80px;margin-top:3px;background-color:red;border-color:transparent' type="submit" class="btn btn-primary">
+									<?php 
+										if (isset($_SESSION['UserData'])) 
+										{	/*XXXXXXAAAANNNNDRRREEEEEEEEEE
+											CHANGE to !isSet */
+											echo 'LOG OUT';
+										}
+										else
+										{
+											echo 'LOG IN';
+										}
+									?>
+								</button>
+								
+							</form>
+						
+						<li style="font-size:1.0em;padding-top:10px"><a href="#"><i class="fa fa fa-shopping-cart fa-2x"></i>(0)</a></li>
+					</div>
+				</div>
+			</div>
+>>>>>>> develop
 						
 				
 					
 
-				</div>
-			</div>
 				
 		</header>
 			
@@ -185,6 +252,7 @@
 			
 
 			
+<<<<<<< HEAD
 			<div class="container" style="margin-top:25px">
 				<center>
 					<h2 style="padding-bottom:25px">Featured Events</h2>
@@ -278,6 +346,21 @@
 							
 							print ("$output");
 							?>
+=======
+				<div class="container" style="margin-top:25px">
+					<center>
+					<h2 style="padding-bottom:25px">Featured Events</h2>
+					</center>
+					
+					
+					<center style="padding-bottom:50px;">
+					<h2 style="padding-bottom:5px;padding-top:50px">What makes us different?</h2>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur dignissim rhoncus quam, eget suscipit ex. Maecenas laoreet, augue vitae efficitur suscipit, mi metus dignissim ipsum, quis bibendum libero tortor vitae tortor. Maecenas varius risus et viverra convallis. Phasellus eu magna vehicula, pulvinar tellus sed, placerat lorem. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Integer dictum, erat et eleifend malesuada, odio felis auctor ante, a dictum mi nibh a mauris. In hac habitasse platea dictumst. Curabitur ac hendrerit sem. Integer a neque pharetra, dictum velit vel, gravida ante. In auctor tortor vel eros pretium, vel laoreet metus ullamcorper. Ut posuere odio nisi, vel elementum nunc congue eget.</p>
+					<p>Praesent imperdiet orci venenatis, vehicula nulla malesuada, posuere nulla. Nullam vitae arcu quis purus pellentesque pharetra. Mauris eget libero eget dolor viverra varius quis sollicitudin massa. Quisque eu placerat lorem, in varius magna. In hac habitasse platea dictumst. Interdum et malesuada fames ac ante ipsum primis in faucibus. Curabitur rhoncus eros ac justo pretium, id vulputate risus congue. Sed nisl ante, consectetur at scelerisque ut, euismod vitae erat. Fusce sed nulla in eros porttitor fringilla at id dui. Morbi sed porta mi. Aliquam dictum sagittis porta. Aenean commodo massa id dolor blandit congue. Nulla fermentum nulla sit amet tincidunt bibendum. Sed aliquam nec sem a porta.</p>
+				</center>
+					
+				
+>>>>>>> develop
 				</div>
 				
 				<center style="padding-bottom:50px;">

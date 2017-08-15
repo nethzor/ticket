@@ -2,6 +2,20 @@
 	session_start();
 	require 'dbconfig/config.php';
 	$output = '';
+<<<<<<< HEAD
+=======
+	
+	if (isset($_SESSION['UserData'])) 
+	{	/*XXXXXXAAAANNNNDRRREEEEEEEEEE
+		CHANGE to !isSet and edit header location*/
+		//exit(header("location:index.php"));
+		$action = "../asb/logout.php"; 
+	}
+	else
+	{
+		$action = "../asb/main.php"; 
+	}
+>>>>>>> develop
 	
 	if (isset($_SESSION['UserData'])) 
 	{	/*XXXXXXAAAANNNNDRRREEEEEEEEEE
@@ -142,6 +156,7 @@
 						<form action="searchResults.php" class="navbar-form navbar-right" role="search" id="searchBox" method="post">
 						<div class="form-group">
 							<input id="searchBoxInput" name="search" type="text" class="form-control" onkeydown="key_down()" placeholder="Search..." autocomplete="off">
+<<<<<<< HEAD
 							<script>
 							  function key_down(e) 
 							  {
@@ -157,6 +172,9 @@
 								initialize();
 							  }
 							</script>
+=======
+							<!--WESSEL!-->
+>>>>>>> develop
 						</div>
 						<button type="submit" class="btn btn-primary">Search</button>
 					</form>

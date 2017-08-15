@@ -1,6 +1,10 @@
 <!doctype html>
 <?php 
+<<<<<<< HEAD
 session_start();
+=======
+	session_start();
+>>>>>>> develop
 require 'dbconfig/config.php';
 
 if (isset($_SESSION['UserData'])) 
@@ -19,7 +23,11 @@ $output = '';
 	mysqli_select_db($db,'projeklogin') or die("Database could not be found");
 
 
+<<<<<<< HEAD
 		if(isset($_POST['search']))
+=======
+	if(isset($_POST['search']))
+>>>>>>> develop
 	{
 		$searchQ = $_POST['search'];
 		$searchQ = preg_replace("#[^0-9a-z]#i","",$searchQ);
@@ -96,6 +104,11 @@ $output = '';
 
 	<body>
 		<header>
+<<<<<<< HEAD
+=======
+			
+			
+>>>>>>> develop
 			<div class="navbar navbar-default navbar-fixed-top navbar-inverse">
 				<div class="container">
 					<div class="navbar-header">
@@ -169,6 +182,10 @@ $output = '';
 			<center>
 				<h2 style="padding-bottom=5px">Featured Events</h2>
 			</center>
+<<<<<<< HEAD
+=======
+			
+>>>>>>> develop
 			<div class="row">			  
 						<!--<div class="col-md-4 text-center">
 							<div class="eventBox">
@@ -184,6 +201,7 @@ $output = '';
 							</div>
 						</div>
 						
+<<<<<<< HEAD
 						<div class="col-md-4 text-center">
 							<div class="eventBox">
 								<div>
@@ -256,6 +274,56 @@ $output = '';
 							</div>
 						</div>';
 						}
+=======
+						<?php
+							$query = "SELECT * FROM events";
+							mysqli_query($db, $query) or die('Error querying database.');
+
+							$result = mysqli_query($db, $query);
+							$row = mysqli_fetch_array($result);						
+							//$row['id'] . ' ' . $eventName = $row['eventName'] . ' ' . $eventDescription = $row['eventDescription'] . ' ' . $eventCategory = $row['eventCategory'] . ' ' . $eventLink = $row['eventLink'] . ' ' . $eventPrice=  $row['eventPrice'] . ' ' . $eventDate = $row['eventDate'] .'<br />';	
+							$eventName = $row['eventName'];
+							$eventDescription = $row['eventDescription'];
+							$eventCategory = $row['eventCategory'];
+							$eventLink = $row['eventLink'];
+							$eventPrice = $row['eventPrice'];
+							$eventDate = $row['eventDate'];
+							$eventsPhotoLink = $row['eventPhotoLink'];
+							$output = '
+							<div style=margin-bottom:150px; class="col-md-4 text-center">
+								<div class="eventBox">
+									<div>
+										<a href="'.$eventLink.'"><span>'.$eventName.'</span></a>
+										<h3>From R'.$eventPrice.'</h3>
+										
+									</div>
+										<img src="'.$eventsPhotoLink.'"height="500" width="500"/>
+										<h3 style=padding-left:10px;padding-right:10px;margin-bottom:20px;>'.$eventDescription.'</h3>
+								</div>
+							</div>';
+							while ($row = mysqli_fetch_array($result)) {
+							//$row['id'] . ' ' . $eventName = $row['eventName'] . ' ' . $eventDescription = $row['eventDescription'] . ' ' . $eventCategory = $row['eventCategory'] . ' ' . $eventLink = $row['eventLink'] . ' ' . $eventPrice=  $row['eventPrice'] . ' ' . $eventDate = $row['eventDate'] .'<br />';
+							$eventName = $row['eventName'];
+							$eventDescription = $row['eventDescription'];
+							$eventCategory = $row['eventCategory'];
+							$eventLink = $row['eventLink'];
+							$eventPrice = $row['eventPrice'];
+							$eventDate = $row['eventDate'];
+							$eventsPhotoLink = $row['eventPhotoLink'];
+							$output .= '
+							<div style=margin-bottom:150px; class="col-md-4 text-center">
+								<div class="eventBox">
+									<div>
+										<a href="'.$eventLink.'"><span>'.$eventName.'</span></a>
+										<h3>From R'.$eventPrice.'</h3>
+										
+									</div>
+										<img src="'.$eventsPhotoLink.'"height="500" width="500"/>
+										<h3 style=padding-left:10px;padding-right:10px;margin-bottom:20px;>'.$eventDescription.'</h3>
+								</div>
+							</div>';
+							}
+>>>>>>> develop
 						?>
 			</div>
 
@@ -279,3 +347,7 @@ $output = '';
 <?php
 	print ("$output");
 ?>
+<<<<<<< HEAD
+=======
+
+>>>>>>> develop

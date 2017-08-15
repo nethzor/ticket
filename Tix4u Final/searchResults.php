@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 	<?php
+=======
+<?php
+>>>>>>> develop
 	require 'dbconfig/config.php';
 	$output = '';
 	session_start();
@@ -13,6 +17,7 @@
 		$action = "../asb/main.php"; 
 	}
 	
+<<<<<<< HEAD
 	
 	
 	if(isset($_POST['search']))
@@ -69,6 +74,9 @@
 		}
 		
 	}
+=======
+	//WESSEL
+>>>>>>> develop
 ?>
 
 <!doctype html>
@@ -83,7 +91,12 @@
 
 	<body style=background-color:#333>
 		<header>
+<<<<<<< HEAD
 			<div class="navbar navbar-default navbar-fixed-top navbar-inverse">
+=======
+		
+						<div class="navbar navbar-default navbar-fixed-top navbar-inverse">
+>>>>>>> develop
 				<div class="container">
 					<div class="navbar-header">
 						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#example">
@@ -149,6 +162,10 @@
 
 				</div>
 			</div>
+<<<<<<< HEAD
+=======
+			
+>>>>>>> develop
 			
 		</header>
 		
@@ -172,6 +189,9 @@
 	<?php 
 		
 		print("$output");
+		
+		print("$output");
+		
 		
 	?>
   

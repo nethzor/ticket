@@ -20,6 +20,7 @@ session_start();
 		$action = "../asb/main.php"; 
 	}
 	
+<<<<<<< HEAD
 	
 	if(isset($_POST['search']))
 	{
@@ -75,6 +76,9 @@ session_start();
 		}
 		
 	}	
+=======
+
+>>>>>>> develop
 ?>
 <html>
 	<head>
@@ -109,6 +113,7 @@ session_start();
 							
 						</ul>
 
+<<<<<<< HEAD
 						
 
 						<form action="searchResults.php" class="navbar-form navbar-right" role="search" id="searchBox" method="post">
@@ -130,6 +135,9 @@ session_start();
 							  }
 							</script>
 						</div>
+=======
+					</div>
+>>>>>>> develop
 						<button type="submit" class="btn btn-primary">Search</button>
 						<!--<input type="text" name="email" id="email" size="36" value="<?php echo $_SESSION['newsletterSignup'];?>"" />!-->
 						</form>
@@ -151,11 +159,19 @@ session_start();
 						</form>
 						
 					<li style="float:right;font-size:1.0em;padding-top:10px"><a href="#"><i class="fa fa fa-shopping-cart fa-2x"></i>(0)</a></li>
+<<<<<<< HEAD
 					</div>
 					
 
 				</div>
 			</div>
+=======
+				</div>
+					
+
+			</div>
+		
+>>>>>>> develop
 				
 		</header>
 		
